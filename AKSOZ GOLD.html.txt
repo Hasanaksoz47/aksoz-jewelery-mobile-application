@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Aksoz Gold Web Sayfasý</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        section {
+            display: none;
+            width: 100%;
+            min-height: 100vh;
+            padding: 20px;
+            background-color: #fff7e6;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #d4af37;
+            margin-bottom: 15px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .resim-iki {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .resim-iki img {
+            width: 90%;
+            height: 80%;
+            position: absolute;
+            opacity: 0;
+            animation: slide 6s infinite;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .resim-iki img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .resim-iki img:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        .resim-iki img:nth-child(3) {
+            animation-delay: 4s;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+            }
+
+            33% {
+                opacity: 1;
+            }
+
+            66% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .buton-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #d4af37;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c49a30;
+        }
+
+        .gectusu,
+        .geri-buton {
+            position: absolute;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+        }
+
+        .gectusu {
+            right: 20px;
+        }
+
+        .gectusu i,
+        .geri-buton i {
+            font-size: 40px;
+            color: #333;
+        }
+
+        .geri-buton {
+            left: 20px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .resim-iki img {
+                width: 100%;
+                height: 70%;
+            }
+
+            button {
+                font-size: 1rem;
+            }
+
+            .gectusu i,
+            .geri-buton i {
+                font-size: 30px;
+            }
+
+            .harita {
+                height: 300px;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #d4af37;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .harita {
+            width: 100%;
+            height: 300px;
+            border: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="ilk-sayfa active">
+        <h1><i class="fa-solid fa-bell"></i> HOÞ GELDÝNÝZ</h1>
+        <img src="https://scontent.fdiy5-1.fna.fbcdn.net/v/t1.6435-9/56450561_1087050874839241_960038573497647104_n.jpg?stp=dst-jpg_tt6&_nc_cat=108&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=689c2a&_nc_ohc=JUVWDrhA7wEQ7kNvgFiz_IL&_nc_ht=scontent.fdiy5-1.fna&oh=00_AYAiNKejwRoJh_Z38SM3pgMjyM4_Yedk5NtowRMzxPAt1Q&oe=671E6458"
+            style="width:100%; height:auto; border-radius:10px; box-shadow:0px 4px 10px rgba(0,0,0,0.2);">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum possimus modi placeat nisi recusandae.
+        </p>
+        <p class="ilk-sayfa-ekstra">Aksoz Gold ile kaliteli altýn ve mücevherat dünyasýna adým atýn. Kalitenin ve
+            güvenin adýyla tanýþýn.</p>
+        <div class="gectusu" onclick="gec(1)">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+    </section>
+
+    <section class="iki-sayfa">
+        <h1><i class="fa-solid fa-address-card"></i> Hakkýmýzda</h1>
+        <p>Aksoz Gold, kuyumculuk sektöründe güvenilirliði ve kaliteli iþçiliði ile tanýnan bir marka. Yýllarýn deneyimi
+            ile altýn ve mücevherat üretiminde öncü bir rol üstlenmiþtir.</p>
+        <div class="buton-container">
+            <button onclick="resimgetir()">Resimleri Gör</button>
+        </div>
+
+        <div class="resim-iki" id="resim-iki">
+            <img
+                src="https://scontent.fdiy1-1.fna.fbcdn.net/v/t1.6435-9/40668166_958640264346970_7183207685867700224_n.jpg?stp=dst-jpg_tt6&_nc_cat=103&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=HNijWhP0pN4Q7kNvgHBAUEr&_nc_ht=scontent.fdiy1-1.fna&_nc_gid=ATSZV3qyQznRemDj--jTNFP&oh=00_AYBLy3d4wPDUeHmFwef3ioA0jfwzPea6xyLbXNDEA_wTQA&oe=671E3C7D">
+            <img
+                src="https://scontent.fdiy5-1.fna.fbcdn.net/v/t1.18169-9/13177292_735475556593945_8917164337790795109_n.jpg?stp=dst-jpg_tt6&_nc_cat=107&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=DApF4Yzee_AQ7kNvgEABQiK&_nc_ht=scontent.fdiy5-1.fna&oh=00_AYDQRVEL-Frix-PjPdLDG_KJagjaCyERH84_SYBl-9jSoA&oe=671E3EAF">
+            <img
+                src="https://scontent.fdiy1-1.fna.fbcdn.net/v/t1.18169-9/10150804_673248942816607_6583620394447419611_n.jpg?stp=dst-jpg_tt6&_nc_cat=100&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=80oPG-VqjVwQ7kNvgHlypSI&_nc_ht=scontent.fdiy1-1.fna&oh=00_AYDJKnltXQtvMJydzHAu40A-m3T5XXh6MizuBT09_QY_oQ&oe=671E39CF">
+            <img src="https://scontent.fdiy1-2.fna.fbcdn.net/v/t1.6435-9/81186825_1687285114782817_4702493399570186240_n.jpg?stp=dst-jpg_tt6&_nc_cat=106&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=13d280&_nc_ohc=j7OxHDWV6GYQ7kNvgHJDQ53&_nc_ht=scontent.fdiy1-2.fna&oh=00_AYDwW8-M4Pb6EusfZFHksd0fueLi5mjn_9wL9LRXsq67DA&oe=671E45C2"
+                alt="">
+        </div>
+
+        <div class="gectusu" onclick="gec(2)">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <div class="geri-buton" onclick="gec(0)">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+    </section>
+
+    <section class="uc-sayfa">
+        <h1><i class="fa-solid fa-tty"></i> Ýletiþim</h1>
+        <p>Þirket ismi: Aksoz Gold</p>
+        <p>Adres: Mardin Midyat</p>
+        <p>Telefon: +90 555 123 4567</p>
+        <p>Email: info@aksozgold.com</p>
+
+        <iframe class="harita"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.7528576482634!2d37.49097131504296!3d37.49540597982639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152007c54cb9c0db%3A0xd5140280c7035f7f!2zTWlkemF0LCBNYXJkaW4!5e0!3m2!1str!2str!4v1693896842325!5m2!1str!2str"
+            allowfullscreen="" loading="lazy"></iframe>
+
+        <div class="gectusu" onclick="gec(3)">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <div class="geri-buton" onclick="gec(1)">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+    </section>
+
+    <section class="urunler-sayfa">
+        <h1><i class="fa-solid fa-crown"></i> Ürünlerimiz</h1>
+        <p>En özel ürünlerimiz ile tanýþýn. Zarif ve þýk tasarýmlarýmýzýn keyfini çýkarýn.</p>
+        <div class="resim-iki">
+            <img
+                src="https://scontent.fdiy5-1.fna.fbcdn.net/v/t1.18169-9/12278643_662182493923252_2843364511374738773_n.jpg?stp=dst-jpg_tt6&_nc_cat=108&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=bJC9SyAY3xgQ7kNvgGXhifa&_nc_ht=scontent.fdiy5-1.fna&oh=00_AYBo0DfpgS8ybb2wQholp7x6TIn0yZqywcf9EoaehM6wxQ&oe=671E544E">
+            <img src="https://scontent.fdiy5-1.fna.fbcdn.net/v/t1.18169-9/12274642_662182420589926_4088411164958661790_n.jpg?stp=dst-jpg_tt6&_nc_cat=109&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=mKuYpbAUZuMQ7kNvgGbug6m&_nc_ht=scontent.fdiy5-1.fna&oh=00_AYBq_DxvVfCH3bnrazIgmisIFHoN-eiO7o2rpJ4U1I7j8A&oe=671E498E"
+                alt="">
+            <img src="https://scontent.fdiy5-1.fna.fbcdn.net/v/t1.18169-9/12246707_662182423923259_2620874103173341535_n.jpg?stp=dst-jpg_tt6&_nc_cat=110&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=7oQiO6K_8J8Q7kNvgHpslHy&_nc_ht=scontent.fdiy5-1.fna&oh=00_AYBiuYA7dfErNS8_17YkutZCOYKa0uIVE30F0ZA7QgEnbw&oe=671E5581"
+                alt="">
+            <img src="https://scontent.fdiy5-1.fna.fbcdn.net/v/t1.18169-9/12241208_662182333923268_7156861826228438045_n.jpg?stp=dst-jpg_tt6&_nc_cat=107&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=Jh3Ix_paMC4Q7kNvgGy-b5i&_nc_ht=scontent.fdiy5-1.fna&oh=00_AYDDS534mw94VMsHNc-rfirtDl66SfMtq2S9x8XqxuePqA&oe=671E631D"
+                alt="">
+            <img src="https://scontent.fdiy1-1.fna.fbcdn.net/v/t1.18169-9/12247133_662182290589939_8707861240889745155_n.jpg?stp=dst-jpg_tt6&_nc_cat=104&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=uaVtEA3Np7UQ7kNvgFftEEO&_nc_ht=scontent.fdiy1-1.fna&oh=00_AYAS4ePnVvVGYDCcATD8x0zLYKfn8COsc9LGHuWWU0rKhw&oe=671E540D"
+                alt="">
+            <img src="https://scontent.fdiy5-1.fna.fbcdn.net/v/t1.18169-9/12241414_662182297256605_5061248953636377524_n.jpg?stp=dst-jpg_tt6&_nc_cat=110&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=cdvFhGQKapsQ7kNvgHZOGN_&_nc_ht=scontent.fdiy5-1.fna&oh=00_AYA504UZVOFUdMnrBZgm34F-LTpamGAGgiG2wCmgGCUXIw&oe=671E3DE7"
+                alt="">
+            <img src="https://scontent.fdiy5-1.fna.fbcdn.net/v/t1.18169-9/12249786_662182397256595_8582309151614290735_n.jpg?stp=dst-jpg_tt6&_nc_cat=109&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=uMqFKUDjnlEQ7kNvgGOWyKe&_nc_ht=scontent.fdiy5-1.fna&oh=00_AYAmOKmEEHbALgA4sUVsxGUeNSQ13w1GbJUhiGhpeJXMwQ&oe=671E4132"
+                alt="">
+            <img src="https://scontent.fdiy5-1.fna.fbcdn.net/v/t1.18169-9/12278867_662182267256608_4060920824163814634_n.jpg?stp=dst-jpg_tt6&_nc_cat=107&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=HiYdEH_T09QQ7kNvgGHnqVQ&_nc_ht=scontent.fdiy5-1.fna&oh=00_AYA0y54wb5RxkmPUKEjDFF1T_c9D3RpwFHeiXeanYc1puw&oe=671E3C70"
+                alt="">
+            <img src="https://scontent.fdiy5-1.fna.fbcdn.net/v/t1.18169-9/12241681_662182450589923_1638412169831272554_n.jpg?stp=dst-jpg_tt6&_nc_cat=107&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=2KmEU3xHeoMQ7kNvgHG9Dm9&_nc_ht=scontent.fdiy5-1.fna&oh=00_AYAxijtSupkh3d3Gwtgy2d-Qa0-0pohyZ9DiRLYIuNBrww&oe=671E4DF1"
+                alt="">
+            <img src="https://scontent.fdiy1-1.fna.fbcdn.net/v/t1.18169-9/12243059_662182217256613_132517200087358107_n.jpg?stp=dst-jpg_tt6&_nc_cat=102&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=PmJWwnguAHUQ7kNvgFLzQsm&_nc_ht=scontent.fdiy1-1.fna&oh=00_AYBR4JGC3mvlq81ehJkxRS_B-K6IuK1EpFpFR8c_aFh77g&oe=671E4691"
+                alt="">
+            <img src="https://scontent.fdiy1-1.fna.fbcdn.net/v/t1.18169-9/12279060_662182250589943_6124051342413322513_n.jpg?stp=dst-jpg_tt6&_nc_cat=100&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=NlvRWmJWg2oQ7kNvgGWwRYJ&_nc_ht=scontent.fdiy1-1.fna&oh=00_AYDGwSMZ5FQ07sD9gqjxeV94lIVfYPLO5HH50IBtCd4ChQ&oe=671E57D7"
+                alt="">
+            <img
+                src="https://scontent.fdiy1-1.fna.fbcdn.net/v/t1.18169-9/12239630_662182490589919_7104035931599871434_n.jpg?stp=dst-jpg_tt6&_nc_cat=102&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=MonBQay_cwcQ7kNvgERef5E&_nc_ht=scontent.fdiy1-1.fna&oh=00_AYBbjTKew-tmYnwzCQCTS0yrxe5gSx3A8foUGsj-fjJALg&oe=671E679A">
+            <img
+                src="https://scontent.fdiy5-1.fna.fbcdn.net/v/t1.18169-9/12227684_662182473923254_5441078528345205784_n.jpg?stp=dst-jpg_tt6&_nc_cat=110&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=dcW5IIzWdaAQ7kNvgHlFiT2&_nc_ht=scontent.fdiy5-1.fna&oh=00_AYARwVyELUoXte5OhwXBhYzXPST9SgXBPiFWioJAcvaYhw&oe=671E6169">
+            <img
+                src="https://scontent.fdiy1-1.fna.fbcdn.net/v/t1.6435-9/81361314_1687285084782820_7826622588859187200_n.jpg?stp=dst-jpg_tt6&_nc_cat=104&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=13d280&_nc_ohc=2LSfCdZds4EQ7kNvgHzxDGW&_nc_ht=scontent.fdiy1-1.fna&_nc_gid=Am80UJI7uf58Gx-Iaa2k6W5&oh=00_AYD5uvoEX67mqLg9dNzACUdSwEra27jco7IVg0wYrXpBdw&oe=671E64F8">
+            <img
+                src="https://scontent.fdiy1-2.fna.fbcdn.net/v/t1.6435-9/80851132_1687269561451039_4905313751130963968_n.jpg?stp=dst-jpg_tt6&_nc_cat=111&cb=99be929b-6bbdfb60&ccb=1-7&_nc_sid=13d280&_nc_ohc=9-bpZRBZDv8Q7kNvgHDiqfI&_nc_ht=scontent.fdiy1-2.fna&_nc_gid=AHL61dmbBX08Ypm84-eQwx6&oh=00_AYDHCFCi6do2R3JQycVe7apYr06p9I6oZ-siB8LL8Iztkw&oe=671E688A">
+        </div>
+        <div class="gectusu" onclick="gec(4)">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <div class="geri-buton" onclick="gec(2)">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+    </section>
+
+    <section class="fiyatlar-sayfa">
+        <h1><i class="fa-solid fa-tag"></i> Ürün Fiyatlarý</h1>
+        <table>
+            <tr>
+                <th>Ürün Adý</th>
+                <th>Fiyat (TL)</th>
+            </tr>
+            <tr>
+                <td>Altýn Kolye</td>
+                <td>2.500</td>
+            </tr>
+            <tr>
+                <td>Pýrlanta Yüzük</td>
+                <td>5.000</td>
+            </tr>
+            <tr>
+                <td>Altýn Bilezik</td>
+                <td>3.000</td>
+            </tr>
+            <tr>
+                <td>Gümüþ Küpe</td>
+                <td>750</td>
+            </tr>
+            <tr>
+                <td>Elmas Kolye</td>
+                <td>10.000</td>
+            </tr>
+        </table>
+        <div class="buton-container">
+            <button onclick="gec(0)">Ana Sayfaya Dön</button>
+        </div>
+    </section>
+
+    <script>
+        let currentSection = 0;
+
+        function gec(yeniSayfa) {
+            const sections = document.querySelectorAll('section');
+            sections[currentSection].classList.remove('active'); 
+            currentSection = yeniSayfa;
+            sections[currentSection].classList.add('active');
+        }
+
+        function resimgetir() {
+            const resim = document.getElementById('resim-iki');
+            resim.style.display = 'flex';
+        }
+    </script>
+</body>
+
+</html>
